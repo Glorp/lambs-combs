@@ -44,8 +44,6 @@
 (define hello (list "Hello?"
                     ""
                     "(some notes to a self:"
-                    "maybe have a DrRacket open?"
-                    "SML as well?"
                     "border-length, textsize stuffs?"
                     "did I switch out \"temp\" with sth?)"))
 

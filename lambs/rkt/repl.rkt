@@ -4,6 +4,7 @@
 (require "run.rkt"
          "parse.rkt"
          "unparse.rkt"
+         "combify.rkt"
          "structs.rkt"
          "draw-exp.rkt"
          "slides.rkt"
@@ -91,7 +92,9 @@
          (write "")
          (loop it conf ds)]
                
-        [(cons ":q" "") (void)]
+        [(cons ":q" "")
+         (write "byebyes")
+         (void)]
 
         [(cons ":run1" top-s)
          (define top (parse top-s))
@@ -108,6 +111,13 @@
              (write ":("))
          (loop exp-s conf ds)]
 
+        [(cons ":combify" exp-s)
+         (define exp (parse exp-s))
+         (if (exp? exp)
+             (write (unparse (combify exp)))
+             (write ":("))
+         (loop exp-s conf ds)]
+        
         [(cons ":rename" exp-s)
          (define exp (parse exp-s))
          (if (exp? exp)
