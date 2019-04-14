@@ -1,0 +1,14 @@
+compiled/
+temp/
+
+*~
+\#*
+.#*
+.DS_Store
+*.bak
+TAGS
+
+*.orig
+*.rej
+
+*.core
