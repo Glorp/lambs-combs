@@ -25,8 +25,7 @@
     [_ #f]))
 
 (define (combify-outer t)
-  (or (combify-halp t)
-      (match t
+  (or (match t
         [(lam p x)
          (cond [(combify-outer x) => (λ (res) (lam p res))]
                [else #f])]
@@ -34,9 +33,9 @@
          (cond [(combify-outer f) => (λ (res) (app res a))]
                [(combify-outer a) => (λ (res) (app f res))]
                [else #f])]
-        [(ref x) #f])))
+        [(ref x) #f])
+      (combify-halp t)))
 
 (define (combify t)
   (cond [(combify-outer t) => combify]
-                    [else t]))
-  
+        [else t]))
