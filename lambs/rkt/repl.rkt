@@ -117,6 +117,20 @@
              (write (unparse (combify exp)))
              (write ":("))
          (loop exp-s conf ds)]
+
+        [(cons ":combify-ski" exp-s)
+         (define exp (parse exp-s))
+         (if (exp? exp)
+             (write (unparse (combify-ski exp)))
+             (write ":("))
+         (loop exp-s conf ds)]
+
+        [(cons ":combify-ski-eta" exp-s)
+         (define exp (parse exp-s))
+         (if (exp? exp)
+             (write (unparse (combify-ski-eta exp)))
+             (write ":("))
+         (loop exp-s conf ds)]
         
         [(cons ":rename" exp-s)
          (define exp (parse exp-s))
