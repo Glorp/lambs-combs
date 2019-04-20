@@ -71,11 +71,18 @@
                     "I foo"))
 
 (define churchnums (list "nums like:"
-                         "zero ≜ λf.λx.x"
-                         "one ≜ λf.λx.f x"
-                         "two ≜ λf.λx.f (f x)"
-                         "five ≜ λf.λx.f (f (f (f (f x))))"
-                         "plus ≜ λa.λb.λf.λx.a f (b f x)"))
+                         "λf.λx.x"
+                         "λf.λx.f x"
+                         "λf.λx.f (f x)"
+                         "λf.λx.f (f (f (f (f x))))"
+                         "λa.λb.λf.λx.a f (b f x)"))
+
+(define ski (list "S x y z ≜ (x z) (y z)"
+                  "K x y ≜ x"
+                  "I x ≜ x"))
+
+(define bc (list "B x y z ≜ x (y z)"
+                 "C x y z ≜ (x z) y"))
 
 
 (define links? (list "code: https://github.com/Glorp/lambs-combs"))
@@ -84,6 +91,8 @@
   `#hash((hello . ,hello)
          (halp . ,halp)
          (churchnums . ,churchnums)
+         (ski . , ski)
+         (bc . , bc)
          (links? . ,links?)))
 
 

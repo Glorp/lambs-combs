@@ -21,6 +21,10 @@ Then, for instructions, cursor on the line below and do <C-return>:
 
 ... SKI stuff ...
 
+:slide ski
+
+:slide bc
+
 *~*~*~*~*~*~*~*~*
 
 :slide links?
