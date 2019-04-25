@@ -17,14 +17,42 @@ Then, for instructions, cursor on the line below and do <C-return>:
 
 *~*~*~*~*~*~*~*~*
 
+:slide lamb-rules
+
 :slide churchnums
 
-... SKI stuff ...
+:slide schon
+
+:slide combs
+
+:slide comb-rules
 
 :slide ski
 
+:slide iks
+
+:slide try-to-ski
+
+:slide ski-rules
+
+:slide churchnums
+
+:slide ski-eta-rules
+
+:slide free-bound
+
+:slide open-closed
+
+:slide churchnums
+
 :slide bc
+
+:slide skibc-rules
+
+:slide churchnums
+
+:slide hask
 
 *~*~*~*~*~*~*~*~*
 
-:slide links?
+:slide link?
