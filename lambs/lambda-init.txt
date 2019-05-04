@@ -19,7 +19,7 @@ Then, for instructions, cursor on the line below and do <C-return>:
 
 :slide lamb-rules
 
-:slide churchnums
+:slide lambda-churchnums
 
 :slide schon
 
@@ -33,9 +33,13 @@ Then, for instructions, cursor on the line below and do <C-return>:
 
 :slide try-to-ski
 
+:slide tried-to-ski
+
+:slide s
+
 :slide ski-rules
 
-:slide churchnums
+:slide eta
 
 :slide ski-eta-rules
 
@@ -43,13 +47,11 @@ Then, for instructions, cursor on the line below and do <C-return>:
 
 :slide open-closed
 
-:slide churchnums
+:slide many-ks
 
 :slide bc
 
 :slide skibc-rules
-
-:slide churchnums
 
 :slide hask
 
