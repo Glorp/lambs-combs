@@ -65,6 +65,8 @@ okay
 
 :slide bc
 
+:slide maybe-harder
+
 :slide skibc-rules
 
 :slide aid-understanding

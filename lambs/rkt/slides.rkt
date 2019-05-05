@@ -71,6 +71,7 @@
          "l1 ≜ λf.λx.f x"
          "l2 ≜ λf.λx.f (f x)"
          "l3 ≜ λf.λx.f (f (f x))"
+         "l4 ≜ λf.λx.f (f (f (f x)))"
          "l5 ≜ λf.λx.f (f (f (f (f x))))"
          ""
          "and like functions like successor"
