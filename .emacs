@@ -13,7 +13,15 @@
 (global-set-key (kbd "C-l") (lambda () (interactive) (insert "\u03bb")))
 (global-set-key (kbd "C-d") (lambda () (interactive) (insert "\u225C")))
 
-(global-set-key (kbd "C-<") 'match-paren)
+(defun duplicate-line ()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank))
+(global-set-key (kbd "C-.") 'duplicate-line)
 
 (defun match-paren ()
   "Go to the matching paren if on a paren; otherwise insert %."
@@ -21,6 +29,7 @@
   (cond ((looking-at "\\s\(") (forward-list 1))
 	((looking-back "\\s\)") (backward-list 1))
 	(t nil)))
+(global-set-key (kbd "C-<") 'match-paren)
 
 (global-set-key (kbd "C-g")
                 (lambda (n)

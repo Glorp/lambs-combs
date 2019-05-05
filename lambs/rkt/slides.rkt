@@ -51,13 +51,12 @@
          "border-length, textsize stuffs?"
          "did I switch out \"temp\" with sth?)")
         
-        (lamb-rules
-         "syntax:"
+        (lamb-syntax
          "exp u ::= x         variable"
          "          λx.u      abstraction"
-         "          u1 u2     application"
-         ""
-         "computation rule:"
+         "          u1 u2     application")
+
+        (lamb-computation
          "(λx.u1) u2"
          "[u2/x]u1"
          ""
@@ -112,8 +111,8 @@
          ""
          "and then e.g."
          "I foo"
-         "BLAH 1 2 3"
-         "BLAH 1 2")
+         "BLAH foo bar quux"
+         "BLAH foo bar")
 
         (ski
          "S x y z ≜ (x z) (y z)"
@@ -137,14 +136,17 @@
          "S is like, oof, stuff...")
 
         (try-to-ski
-         "maybe doable:"
+         "we can try to turn som lambdas into SKI")
+
+        (maybe-doable
          "λx.x"
          "λf.λx.x"
-         "λa.λb.λc.c"
-         ""
-         "maybe harder:"
+         "λa.λb.λc.c")
+        
+        (maybe-harder
+         "λa.λb.λc.b"
          "λf.λx.f x"
-         "λa.λb.λc.b")
+         "λf.λx.x f")
 
         (tried-to-ski
          "translate by gradually rewriting and testing with dummy args"
@@ -162,17 +164,19 @@
          "S x y z ≜ (x z) (y z)"
          ""
          "in translating we pass inn two arguments (all but one)"
-         "so the z will kind of replace the original lambda-parameter"
-         ""
+         "so the z will kind of replace the original lambda-parameter")
+        
+        (s-fun
          "function applications consists of two things"
          "function-part-thing and argument-part-thing"
          ""
          "the z will then be passed into both so _those_ need to be"
-         "made into functions accepthing the original lambda parameter"
-         ""
-         "so:"         
-         "λf.λx.f x"
-         "λa.λb.λc.b")
+         "made into functions accepthing the original lambda parameter")
+
+        (aid-understanding
+         "\"To sum up, Point-Free helps you tidy your code into more"
+         "concise implementations which tend to aid you in"
+         "understanding what it is you are trying to do.\"")
         
         (ski-rules
          "λx.x                    => I"
@@ -233,7 +237,13 @@
 
         (fewer
          "we could do like S K K instead of I"
-         "there's some stuff about")
+         ""
+         "there's some stuff about having maybe just one combinator"
+         "which you can kind of do. but we don't"
+         ""
+         "says Schönfinkel:"
+         "\"But on account of its obvious arbitrariness it is"
+         "probably without any real significance.\"")
 
         (hask
          "foo x y = (x + y) / 2")
