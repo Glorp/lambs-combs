@@ -171,7 +171,7 @@
          "function-part-thing and argument-part-thing"
          ""
          "the z will then be passed into both so _those_ need to be"
-         "made into functions accepthing the original lambda parameter")
+         "made into functions accepting the original lambda parameter")
 
         (aid-understanding
          "\"To sum up, Point-Free helps you tidy your code into more"
