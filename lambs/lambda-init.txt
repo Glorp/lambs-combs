@@ -57,10 +57,6 @@ okay
 
 :slide ski-eta-rules
 
-:slide free-bound
-
-:slide open-closed
-
 :slide many-ks
 
 :slide bc

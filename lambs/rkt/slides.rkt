@@ -168,6 +168,8 @@
          "so the z will kind of replace the original lambda-parameter")
         
         (s-fun
+         "S x y z ≜ (x z) (y z)"
+         ""
          "function applications consists of two things"
          "function-part-thing and argument-part-thing"
          ""
@@ -183,24 +185,6 @@
          "λx.x                    => I"
          "λx.u, if no free x in u => K u"
          "λx.u1 u2                => S (λx.u1) (λx.u2)")
-
-        (free-bound
-         "no free x in/all x-variables are bound"
-         "λx.(foo x y z) (bar (λx.x) z y)"
-         ""
-         "there is a free x in the subexpression/the x is not bound"
-         "(foo x y z)"
-         ""
-         "and no free x in subexpression/the x is bound"
-         "(bar (λx.x) z y)"
-         ""
-         "like it's kind of like"
-         "taking into account *this* much context"
-         "this here x is free or is bound")
-
-        (open-closed
-         "(an expression with free variables is open."
-         "an expression with no free variables is closed.)")
 
         (eta
          "λx.f x is the same as f as long as there is no free x in x")
