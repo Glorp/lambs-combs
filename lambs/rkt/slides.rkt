@@ -91,7 +91,7 @@
          "  of the branch of science in question."
          ""
          "  On the building blocks of mathematical logic"
-         "  Moses Schönhinkel")
+         "  Moses Schönfinkel")
 
         (combs
          "for like our purposes:"
